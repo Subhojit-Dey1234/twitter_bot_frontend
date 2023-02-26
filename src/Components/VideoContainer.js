@@ -10,7 +10,7 @@ export default function VideoContainer() {
 	const [preview_image_url, setPreviewImageUrl] = useState("")
 	useEffect(() => {
 		axios
-			.get(`http://localhost:5000/${id}`)
+			.get(`http://18.116.237.227:5000/${id}`)
 			.then((res) => {
 				console.log(res);
 				if (res.status === 200) {
