@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom";
 import VideoDownload from "./VideoDownload";
 import { Grid } from "@mui/material";
 
+const api_url ='https://ntydsv3jbe.execute-api.us-east-2.amazonaws.com/'
+
 export default function VideoContainer() {
 	const { id } = useParams();
 	const [videos, setVideos] = useState([]);
@@ -12,7 +14,7 @@ export default function VideoContainer() {
 	const [ loading, setLoading ] = useState(true)
 	useEffect(() => {
 		axios
-			.get(`http://18.116.237.227:5000/${id}`)
+			.get(`${api_url}${id}`)
 			.then((res) => {
 				console.log(res);
 				if (res.status === 200) {
