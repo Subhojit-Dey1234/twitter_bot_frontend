@@ -1,7 +1,6 @@
 import { Button, TextField } from "@mui/material";
 import React, { useState } from "react";
 
-const frontend_url = `https://getdownload.me/`
 
 export default function HomeContainer() {
     const [url,setUrl] = useState("")
@@ -11,7 +10,7 @@ export default function HomeContainer() {
 
         let twitter_id = pathname.split('/')
 
-        window.location = `${frontend_url}${twitter_id[twitter_id.length-1]}`
+        window.location.href = `/${twitter_id[twitter_id.length-1]}`
     }
 	return (
 		<div>
