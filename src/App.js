@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import VideoContainer from "./Components/VideoContainer";
 import './App.css'
 import HomeContainer from "./Components/HomeContainer";
@@ -7,7 +7,7 @@ function App() {
     <div>
       <Router>
         <Routes>
-          <Route path='/' element={<HomeContainer/>} />
+          <Route exact path='/' element={<HomeContainer/>} />
           <Route path="/:id" element = {<VideoContainer/>} />
         </Routes>
       </Router>

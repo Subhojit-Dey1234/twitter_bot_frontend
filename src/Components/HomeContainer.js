@@ -10,7 +10,7 @@ export default function HomeContainer() {
 
         let twitter_id = pathname.split('/')
 
-        window.location.href = `/${twitter_id[twitter_id.length-1]}`
+        window.location.href = `/#/${twitter_id[twitter_id.length-1]}`
     }
 	return (
 		<div>
