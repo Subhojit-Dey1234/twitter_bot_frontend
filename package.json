@@ -1,6 +1,6 @@
 {
   "name": "app",
-  "homepage": "https://getdownload.me/",
+  "homepage": "https://getdownload.me/#",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
