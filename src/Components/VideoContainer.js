@@ -9,6 +9,7 @@ const api_url ='https://ntydsv3jbe.execute-api.us-east-2.amazonaws.com/'
 export default function VideoContainer() {
 	const { id } = useParams();
 	const [videos, setVideos] = useState([]);
+	const [serverError, setServerError] = useState(null)
 	const [preview_image_url, setPreviewImageUrl] = useState("")
 	const [ is_media, setIsMediaPresent] = useState(false)
 	const [ loading, setLoading ] = useState(true)
@@ -26,15 +27,15 @@ export default function VideoContainer() {
 				}
 			})
 			.catch((e) => {
-				console.log(e);
+				setServerError(e)
 				setLoading(false)
 			});
 	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 	if(is_media) return <h1 style={{ textAlign: "center", textTransform:"uppercase",color : "white" }}>There is not media attached.....</h1>
-
-	
 	if(loading) return <h1 style={{ textAlign: "center", textTransform:"uppercase",color : "white" }}>Loading...</h1>
+
+	if(serverError) return <h1 style={{ textAlign: "center", textTransform:"uppercase",color : "white" }}>Network Error. Try Again...</h1>
 
 	return (
 		<div>
