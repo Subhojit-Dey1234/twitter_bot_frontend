@@ -11,7 +11,7 @@ function App() {
           <Route path="/:id" element = {<VideoContainer/>} />
         </Routes>
       </Router>
-      <div style={{background:"#1c3a68",margin:"0 10em",padding:"10px 0"}}>
+      <div style={{background:"#1c3a68",padding:"10px 0"}}>
         <p style={{textAlign:"center",fontSize:"1.2em"}}>Build by Subhojit Dey 😁</p>
         <p style={{textAlign:"center"}}><a href="https://twitter.com/thesubhojitdey" style={{textDecoration:"none",color:"wheat"}}>@subhojitdey09</a></p>
       </div>
