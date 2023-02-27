@@ -9,6 +9,7 @@ export default function VideoDownload({ link, bits }) {
 	size = size.toPrecision(2);
 	return (
 		<Grid
+			className="videoItems"
 			item
 			xs={12}
 			style={{
@@ -16,14 +17,15 @@ export default function VideoDownload({ link, bits }) {
 				background: "#80B3FF",
 				alignItems: "center",
 				justifyContent: "space-around",
-				margin: "10px 30vw",
-				height: "9vh",
+				margin: "10px 17vw",
+				height: "10vh",
 				borderRadius: "10px",
-				border : "4px solid black"
+				// padding : "0 10px",
+
 			}}
 		>
-			<span style={{ fontWeight: "bold" }}>Format : MP4</span>
-			<span style={{ fontWeight: "bold" }}>Size: {size} MB</span>
+			<span className="videoContainerFont" style={{ fontWeight: "bold" }}>Format : MP4</span>
+			<span className="videoContainerFont" style={{ fontWeight: "bold" }}>Size: {size} MB</span>
 			<Button
 				variant="contained"
 				color="primary"
@@ -41,7 +43,6 @@ export default function VideoDownload({ link, bits }) {
 						});
 				}}
 			>
-				Download
 			</Button>
 		</Grid>
 	);

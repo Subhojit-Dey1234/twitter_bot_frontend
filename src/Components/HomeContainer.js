@@ -60,7 +60,7 @@ export default function HomeContainer() {
 					</a>
 				</h2>
 				<TextField
-					style={{ width: "50vw", color: "white", cursor: "pointer" }}
+					style={{ width: "70vw", color: "white", cursor: "pointer" }}
 					color={error ? "error" : "info"}
 					value={url}
 					focused
@@ -74,6 +74,7 @@ export default function HomeContainer() {
 					InputProps={{
 						endAdornment: (
 							<Button
+								className="downloadBtn"
 								sx={{ cursor: "pointer" }}
 								style={{ color: "white", background: "#80B3FF" }}
 								onClick={() => {

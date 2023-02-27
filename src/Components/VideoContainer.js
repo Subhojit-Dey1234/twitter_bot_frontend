@@ -17,7 +17,6 @@ export default function VideoContainer() {
 		axios
 			.get(`${api_url}${id}`)
 			.then((res) => {
-				console.log(res);
 				if (res.status === 200) {
 					setLoading(false)
 					const { includes } = res.data
@@ -44,7 +43,7 @@ export default function VideoContainer() {
 				<img
 					src={preview_image_url}
 					style={{
-						width: "20em",
+						width: "10em",
 						border : "2px solid white"
 					}}
 					alt="video thumbnail"
